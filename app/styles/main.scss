@@ -1,9 +1,14 @@
 @import "compass_twitter_bootstrap";
 
+.stage {
+  position: relative;
+}
+
 .show {
   background: #EEE;
   margin: 1em 0;
-  position: relative;
+  position: absolute;
+  left: 0;
 
   &.selected-true {
     background: #222;
