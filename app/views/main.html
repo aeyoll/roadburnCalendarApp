@@ -20,7 +20,7 @@
               <label class="checkbox" for="{{show.name}}">
                 <input type="checkbox" ng-click="save()" ng-model="show.selected" id="{{show.name}}">
                 <p>{{show.name}}</p>
-                <abbr>{{show.start}}</abbr> - <abbr>{{show.end}}</abbr>
+                <abbr ng-bind-html-unsafe="show.start | formatHour">{{show.start}}</abbr> - <abbr ng-bind-html-unsafe="show.end | formatHour">{{show.end}}</abbr>
               </label>
             </div>
           </div>
