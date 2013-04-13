@@ -6,22 +6,26 @@
 <div class="row-fluid">
 
   <div class="span9">
-    <h2>Friday</h2>
-    <div class="row-fluid">
-      <div ng-repeat="(stage_name, stage) in fridayShows" class="stage span3">
-        <p>{{stage_name}}</p>
-        <div ng-repeat="show in stage" class="show-wrapper span12 selected-{{show.selected}}" style="top: {{show.start-1415+20+10}}px;">
-          <div class="show" style="height: {{(show.end - show.start)}}px; " title="{{show.name}} - {{show.start}} - {{show.end}}">
-            <label class="checkbox" for="{{show.name}}">
-              <input type="checkbox" ng-model="show.selected" id="{{show.name}}">
-              <p>{{show.name}}</p>
-              <abbr>{{show.start}}</abbr> - <abbr>{{show.end}}</abbr>
-            </label>
+    <div ng-repeat="(day_name, day) in shows" class="day">
+
+      <h2>{{day_name}}</h2>
+      <div class="row-fluid">
+        <div ng-repeat="(stage_name, stage) in day" class="stage span3">
+          <p>{{stage_name}}</p>
+          <div ng-repeat="show in stage" class="show-wrapper span12 selected-{{show.selected}}" style="top: {{show.start-1400+20+10}}px;">
+            <div class="show" style="height: {{(show.end - show.start)}}px; " title="{{show.name}} - {{show.start}} - {{show.end}}">
+              <label class="checkbox" for="{{show.name}}">
+                <input type="checkbox" ng-model="show.selected" id="{{show.name}}">
+                <p>{{show.name}}</p>
+                <abbr>{{show.start}}</abbr> - <abbr>{{show.end}}</abbr>
+              </label>
+            </div>
           </div>
         </div>
-      </div>
 
+      </div>
     </div>
+
   </div>
 
   <aside class="span3">
