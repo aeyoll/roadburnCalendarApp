@@ -123,6 +123,25 @@ angular.module('roadburnCalendarApp')
               {'name':'Mr Peter Hayden', 'start':'2130', 'end':'2245', 'selected': false},
               {'name':'The Cosmic Dead', 'start':'2315', 'end':'2445', 'selected': false},
             ]
+          },
+          '4. Afterburner': {
+            '1. mainStage':[
+              {'name':'Outside The Great Circle', 'start':'1400', 'end':'1415', 'selected': false},
+              {'name':'Astra', 'start':'1430', 'end':'1530', 'selected': false},
+              {'name':'Sigh', 'start':'1600', 'end':'1700', 'selected': false},
+              {'name':'Michel Rother', 'start':'1730', 'end':'1845', 'selected': false},
+              {'name':'Spiritual Beggars', 'start':'1915', 'end':'2030', 'selected': false},
+              {'name':'Ihsahn & Leprous', 'start':'2100', 'end':'2245', 'selected': false},
+              {'name':'Zodiac', 'start':'2315', 'end':'2400', 'selected': false},
+            ],
+            '2. Green Room':[
+              {'name':'Diagonal', 'start':'1530', 'end':'1630', 'selected': false},
+              {'name':'Nihil', 'start':'1700', 'end':'1800', 'selected': false},
+              {'name':'Golden Void', 'start':'1830', 'end':'1930', 'selected': false},
+              {'name':'Die Kreuzen', 'start':'2000', 'end':'2100', 'selected': false},
+              {'name':'Electric Moon', 'start':'2130', 'end':'2230', 'selected': false},
+              {'name':'Switchblade', 'start':'2300', 'end':'2400', 'selected': false},
+            ],
           }
         };
 
