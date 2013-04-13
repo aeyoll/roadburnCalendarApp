@@ -93,7 +93,7 @@ angular.module('roadburnCalendarApp')
               {'name':'The Ocean', 'start':'1400', 'end':'1500', 'selected': false},
               {'name':'Alcest', 'start':'1530', 'end':'1640', 'selected': false},
               {'name':'Cult of Luna', 'start':'1710', 'end':'1820', 'selected': false},
-              {'name':'High on Fire', 'start':'1850', 'end':'1950', 'selected': false},
+              {'name':'High on Fire (2nd show)', 'start':'1850', 'end':'1950', 'selected': false},
               {'name':'Die Kreuzen', 'start':'2015', 'end':'2115', 'selected': false},
               {'name':'Godflesh', 'start':'2145', 'end':'2325', 'selected': false},
               {'name':'Endless Boogie', 'start':'2350', 'end':'2500', 'selected': false}
@@ -105,7 +105,7 @@ angular.module('roadburnCalendarApp')
               {'name':'Antisect', 'start':'1730', 'end':'1830', 'selected': false},
               {'name':'A Forest of Stars', 'start':'1900', 'end':'2010', 'selected': false},
               {'name':'Elder', 'start':'2040', 'end':'2140', 'selected': false},
-              {'name':'Satan\'s Satyrs', 'start':'2210', 'end':'2300', 'selected': false},
+              {'name':'Satan\'s Satyrs (2nd show)', 'start':'2210', 'end':'2300', 'selected': false},
               {'name':'Asphyx', 'start':'2330', 'end':'2450', 'selected': false},
             ],
             '3. Green Room':[
