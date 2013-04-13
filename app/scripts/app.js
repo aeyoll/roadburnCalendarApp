@@ -10,4 +10,9 @@ angular.module('roadburnCalendarApp', ['LocalStorageModule'])
       .otherwise({
         redirectTo: '/'
       });
+  })
+  .filter('removeNumbers', function() {
+    return function(text) {
+      return text.substring(3);
+    };
   });
