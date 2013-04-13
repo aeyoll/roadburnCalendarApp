@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('roadburnCalendarApp', [])
+angular.module('roadburnCalendarApp', ['LocalStorageModule'])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
