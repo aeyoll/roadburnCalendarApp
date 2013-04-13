@@ -1,11 +1,11 @@
-<div class="hero-unit">
+<div class="hero-unit hide-on-print">
   <h1>Roadburn Calendar!</h1>
 </div>
 
 
 <div class="row-fluid">
 
-  <div class="span9">
+  <div class="span9 calendar">
     <div ng-repeat="(day_name, day) in shows" class="day">
 
       <h2>{{day_name}}</h2>
@@ -28,8 +28,9 @@
 
   </div>
 
-  <aside class="span3">
+  <aside class="span3 hide-on-print">
     <div class="well">
+      <p>Select the shows you want to see, and just print it!</p>
       <a ng-click="render()" href="#" class="btn">Print it</a>
     </div>
   </aside>

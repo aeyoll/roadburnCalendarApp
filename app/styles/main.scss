@@ -27,3 +27,30 @@
     visibility: hidden;
   }
 }
+
+@media print {
+  * {
+    -webkit-print-color-adjust:exact;
+  }
+  .hide-on-print {
+    &.span3 {
+      display: none;
+    }
+    display: none;
+  }
+  .calendar {
+    width: 100% !important;
+  }
+  .day {
+    page-break-after: always;
+    page-break-inside: avoid;
+  }
+  .show {
+    background: #EEE !important;
+
+    .selected-true & {
+      background: #222 !important;
+      color: #FFF !important;
+    }
+  }
+}
