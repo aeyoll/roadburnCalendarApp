@@ -4,11 +4,15 @@
   position: relative;
 }
 
-.show {
-  background: #EEE;
-  margin: 1em 0;
+.show-wrapper {
   position: absolute;
   left: 0;
+  overflow: hidden;
+}
+.show {
+  background: #EEE;
+  overflow: hidden;
+  min-height: 20px;
 
   &.selected-true {
     background: #222;
