@@ -1,0 +1,30 @@
+<div class="hero-unit">
+  <h1>Roadburn Calendar!</h1>
+</div>
+
+
+<div class="row">
+
+  <div class="span8">
+    <h2>Friday</h2>
+    <div class="row">
+      <div ng-repeat="(stage_name, stage) in fridayShows" class="span2">
+        {{stage_name}}
+        <div ng-repeat="show in stage" class="show selected-{{show.selected}}" style="height: {{(show.end - show.start) / 2}}px;">
+          <label class="checkbox" for="{{show.name}}">
+            <input type="checkbox" ng-model="show.selected" id="{{show.name}}">
+            <p>{{show.name}}</p>
+            <abbr>{{show.start}}</abbr> - <abbr>{{show.end}}</abbr>
+          </label>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <aside class="span4">
+    <div class="well">
+      <a ng-click="render()" href="#" class="btn">Print it</a>
+    </div>
+  </aside>
+</div>

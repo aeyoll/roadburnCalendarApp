@@ -1,0 +1,16 @@
+@import "compass_twitter_bootstrap";
+
+.show {
+  background: #EEE;
+  margin: 1em 0;
+  position: relative;
+
+  &.selected-true {
+    background: #222;
+    color: #FFF;
+  }
+
+  input {
+    visibility: hidden;
+  }
+}
