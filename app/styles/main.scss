@@ -32,19 +32,17 @@
 .affix {
   position: fixed;
 }
+.afterburner-false .day:last-child,
+.oldie .afterburner-false .day + .day + .day + .day {
+  display: none;
+}
 
 @media print {
   * {
     -webkit-print-color-adjust:exact;
   }
   .hide-on-print {
-    &.span3 {
-      display: none;
-    }
     display: none;
-  }
-  .calendar {
-    width: 100% !important;
   }
   .day {
     page-break-after: always;

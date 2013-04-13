@@ -2,12 +2,15 @@
 
 angular.module('roadburnCalendarApp')
   .controller('MainCtrl', function ($scope, localStorageService) {
-    $scope.stages = [
-      'Main Stage',
-      'Her Patronaat',
-      'Green Room',
-      'Stage01'
-    ];
+    var afterburner = localStorageService.get('afterburner');
+
+    if (afterburner !== null) {
+      $scope.afterburner = JSON.parse(afterburner);
+    }
+    else {
+      $scope.afterburner = true;
+      localStorageService.add('afterburner', JSON.stringify($scope.afterburner));
+    }
 
     var shows = localStorageService.get('shows');
     if (shows !== null) {
@@ -148,8 +151,13 @@ angular.module('roadburnCalendarApp')
       localStorageService.add('shows', JSON.stringify($scope.shows));
     }
 
-    $scope.save = function() {
+    $scope.saveShows = function() {
       localStorageService.remove('shows');
       localStorageService.add('shows', JSON.stringify($scope.shows));
+    };
+
+    $scope.saveAfterburner = function() {
+      localStorageService.remove('afterburner');
+      localStorageService.add('afterburner', JSON.stringify($scope.afterburner));
     };
   });

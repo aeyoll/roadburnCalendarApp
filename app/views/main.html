@@ -4,9 +4,14 @@
 
 <div class="hide-on-print">
   <p>Select the shows you want to see, and just print it! <a ng-click="render()" href="javascript:window.print()" class="btn">Print it</a></p>
+  <p>
+    <label class="checkbox" for="show-afterburner">
+      <input type="checkbox" ng-model="afterburner" ng-click="saveAfterburner()" id="show-afterburner"> Show the afterburner
+    </label>
+  </p>
 </div>
 
-<div class="row-fluid">
+<div class="row-fluid afterburner-{{afterburner}}">
 
   <div class="span12 calendar">
     <div ng-repeat="(day_name, day) in shows" class="day">
@@ -18,7 +23,7 @@
           <div ng-repeat="show in stage" class="show-wrapper span12 selected-{{show.selected}}" style="top: {{show.start-1400+20+10}}px;">
             <div class="show" style="height: {{(show.end - show.start)}}px; " title="{{show.name}} - {{show.start}} - {{show.end}}">
               <label class="checkbox" for="{{show.name}}">
-                <input type="checkbox" ng-click="save()" ng-model="show.selected" id="{{show.name}}">
+                <input type="checkbox" ng-click="saveShows()" ng-model="show.selected" id="{{show.name}}">
                 <p>{{show.name}}</p>
                 <abbr ng-bind-html-unsafe="show.start | formatHour">{{show.start}}</abbr> - <abbr ng-bind-html-unsafe="show.end | formatHour">{{show.end}}</abbr>
               </label>
