@@ -6,7 +6,7 @@ Here is a little print-friendly calendar app based on Angular.js to view all sho
 Want to contribute?
 -------------------
 
-I used Yeoman to build the app: 
+I used Yeoman to build the app.
 
 Yeoman installation (requires Node.js):
 
