@@ -17,16 +17,16 @@
   <div class="span12 calendar">
     <div ng-repeat="(day_name, day) in shows" class="day">
 
-      <h2 ng-bind-html-unsafe="day_name | removeNumbers">{{day_name}}</h2>
+      <h2>{{day_name|removeNumbers}}</h2>
       <div class="row-fluid">
         <div ng-repeat="(stage_name, stage) in day" class="stage span3">
-          <p ng-bind-html-unsafe="stage_name | removeNumbers">{{stage_name}}</p>
-          <div ng-repeat="show in stage" class="show-wrapper span12 selected-{{show.selected}}" style="top: {{show.start-1400+20+10}}px;">
-            <div class="show" style="height: {{(show.end - show.start)}}px; " title="{{show.name}} - {{show.start}} - {{show.end}}">
+          <p>{{stage_name|removeNumbers}}</p>
+          <div ng-repeat="show in stage" class="show-wrapper span12 selected-{{show.selected}}" style="top: {{show.start|getPosition}}px;">
+            <div class="show" style="height: {{show.end|getHeight:show.start}}px; " title="{{show.name}} - {{show.start}} - {{show.end}}">
               <label class="checkbox" for="{{show.name}}">
                 <input type="checkbox" ng-click="saveShows()" ng-model="show.selected" id="{{show.name}}">
                 <span>{{show.name}}</span> <br/>
-                <abbr ng-bind-html-unsafe="show.start | formatHour">{{show.start}}</abbr> - <abbr ng-bind-html-unsafe="show.end | formatHour">{{show.end}}</abbr>
+                <abbr>{{show.start|formatHour}}</abbr> - <abbr>{{show.end|formatHour}}</abbr>
               </label>
             </div>
           </div>
